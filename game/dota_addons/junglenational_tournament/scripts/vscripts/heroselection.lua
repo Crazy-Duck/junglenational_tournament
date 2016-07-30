@@ -83,16 +83,16 @@ function HeroSelection:DraftSelect ( event )
 	end
 	
 	if HeroSelection.playerDrafts[ DOTA_TEAM_GOODGUYS ] ~= nil and HeroSelection.playerDrafts[ DOTA_TEAM_BADGUYS ] ~= nil then
-		Notifications:TopToTeam(1, {hero=HeroSelection.playerDrafts[ DOTA_TEAM_GOODGUYS ].Agility, duration=3.0, imagestyle="landscape"})
-		Notifications:TopToTeam({text=" Agility ", style={color="green"}, continue=true})
+		Notifications:TopToTeam(1, {hero=HeroSelection.playerDrafts[ DOTA_TEAM_GOODGUYS ].Agility, duration=10.0, imagestyle="landscape"})
+		Notifications:TopToTeam(1, {text=" Agility ", style={color="green"}, continue=true})
 		Notifications:TopToTeam(1, {hero=HeroSelection.playerDrafts[ DOTA_TEAM_BADGUYS ].Agility, imagestyle="landscape", continue=true})
 		
-		Notifications:TopToTeam(1, {hero=HeroSelection.playerDrafts[ DOTA_TEAM_GOODGUYS ].Intelligence, duration=3.0, imagestyle="landscape"})
-		Notifications:TopToTeam({text=" Intelligence ", style={color="blue"}, continue=true})
+		Notifications:TopToTeam(1, {hero=HeroSelection.playerDrafts[ DOTA_TEAM_GOODGUYS ].Intelligence, duration=10.0, imagestyle="landscape"})
+		Notifications:TopToTeam(1, {text=" Intelligence ", style={color="blue"}, continue=true})
 		Notifications:TopToTeam(1, {hero=HeroSelection.playerDrafts[ DOTA_TEAM_BADGUYS ].Intelligence, imagestyle="landscape", continue=true})
 		
-		Notifications:TopToTeam(1, {hero=HeroSelection.playerDrafts[ DOTA_TEAM_GOODGUYS ].Strength, duration=3.0, imagestyle="landscape"})
-		Notifications:TopToTeam({text=" Strength ", style={color="red"}, continue=true})
+		Notifications:TopToTeam(1, {hero=HeroSelection.playerDrafts[ DOTA_TEAM_GOODGUYS ].Strength, duration=10.0, imagestyle="landscape"})
+		Notifications:TopToTeam(1, {text=" Strength ", style={color="red"}, continue=true})
 		Notifications:TopToTeam(1, {hero=HeroSelection.playerDrafts[ DOTA_TEAM_BADGUYS ].Strength, imagestyle="landscape", continue=true})
 	end
 end
