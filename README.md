@@ -1,4 +1,4 @@
-# Junglenational
+# Junglenational Tournament Edition
 
 Hone your jungling skills in this enthralling new 1v1 custom game! 
 
