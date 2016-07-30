@@ -127,9 +127,11 @@ var picks = [];
 
 /* Picking phase is done, allow the player to enter the game */
 function OnPickingDone( data ) {
-	$("#EnterGameBtn").RemoveClass( "disabled" );
-	$("#EnterGameBtnTxt").text = "Enter Game";
-	canEnter = true;
+	if (Players.GetTeam(Players.GetLocalPlayer()) != 1) {
+		$("#EnterGameBtn").RemoveClass( "disabled" );
+		$("#EnterGameBtnTxt").text = "Enter Game";
+		canEnter = true;
+	}
 	GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_TOP_HEROES, true );
 }
 
@@ -162,7 +164,7 @@ function LoadPicks() {
 	picks.push(intelligence);
 	picks.push(strength);
 	
-	GameEvents.SendCustomGameEventToServer( "picks_chosen", {
+	GameEvents.SendCustomGameEventToServer( "draft_selected", {
 			"Team" :  Players.GetTeam(Players.GetLocalPlayer()), 
 			"Picks" : {
 				"Agility": agility.name, 
